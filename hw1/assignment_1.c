@@ -1,3 +1,10 @@
+// Objective: Understand the basics of pointers, the address-of operator, and dereferencing.
+// Task:
+// Declare an integer variable and initialize it with a value.
+// Declare a pointer variable that points to the integer.
+// Print the address of the integer variable using both the variable and the pointer.
+// Modify the value of the integer using the pointer and print the new value.
+
 #include <stdio.h>
 
 int main() {
