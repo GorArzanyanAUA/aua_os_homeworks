@@ -9,13 +9,13 @@
 
 
 void plain_forks (){
-        
-        //  So EVERY process runs every
-        //  fork that is left : the population doubles 3 times. Letters are
-        //  birth order, P0 is the original process :
-        //
+
+        //  Nobody branches on the return value, so EVERY process runs every
+        //  fork that is left : the population doubles 3 times, 1 -> 2 -> 4 -> 8.
+        //  A process born at fork n only runs the forks after n, so the tree is
+        //  lopsided : the original ends up with 3 children, its first child with
+        //  2, the next with 1, and the last four with none.
         printf("Start : pid %d, parent %d\n", getpid(), getppid());
-        fflush(stdout);              // else this line is copied into every child
 
         int ret1 = fork();           // 1 -> 2 processes
         if (ret1 == -1) {
